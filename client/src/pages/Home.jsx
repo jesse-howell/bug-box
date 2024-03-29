@@ -3,6 +3,8 @@ import { QUERY_USERS } from "../utils/queries";
 
 import UserList from "../components/UserList";
 
+import Footer from "../components/Footer";
+
 function Home() {
   const { data, loading, error } = useQuery(QUERY_USERS);
 
@@ -21,6 +23,7 @@ function Home() {
     <>
       <div>Home</div>
       <UserList users={users} />
+      <Footer />
     </>
   );
 }
