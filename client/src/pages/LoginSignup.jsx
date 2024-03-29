@@ -5,7 +5,7 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const Login = () => {
+const LoginSignup = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -82,4 +82,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginSignup;
