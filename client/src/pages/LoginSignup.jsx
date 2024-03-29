@@ -5,6 +5,8 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
+import Footer from "../components/Footer";
+
 const LoginSignup = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -45,29 +47,31 @@ const LoginSignup = () => {
         <p>
           Success! You may now head{' '}
           <Link to="/">back to the homepage.</Link>
+          {/* do we need the footer component here??? */}
+          {/* <Footer /> */}
         </p>
       )
-    } 
+    }
     return (
-      <form onSubmit={handleFormSubmit}>
+      <><form onSubmit={handleFormSubmit}>
         <input
           placeholder="Your email"
           name="email"
           type="email"
           value={formState.email}
-          onChange={handleChange}
-        />
+          onChange={handleChange} />
         <input
           placeholder="******"
           name="password"
           type="password"
           value={formState.password}
-          onChange={handleChange}
-        />
+          onChange={handleChange} />
         <button type="submit">
           Submit
         </button>
-      </form>
+      </form><>
+          <Footer />
+        </></>
     );
   };
 
@@ -78,6 +82,7 @@ const LoginSignup = () => {
         {renderForm()}
         {error && <div>{error.message}</div>}
       </div>
+      <Footer />
     </main>
   );
 };

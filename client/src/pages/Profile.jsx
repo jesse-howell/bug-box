@@ -7,6 +7,8 @@ import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 // Components
 import UserList from '../components/UserList';
 
+import Footer from '../components/Footer';
+
 const Profile = () => {
   const { id } = useParams();
 
@@ -67,6 +69,7 @@ const Profile = () => {
         {renderCurrentUserInfo()}
         {renderUserList()}
       </div>
+      <Footer />
     </div>
   );
 };
