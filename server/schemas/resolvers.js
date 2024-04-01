@@ -42,8 +42,11 @@ const resolvers = {
 
       return { token, user };
     },
-
-
+    //Remove a user RS 040124
+    removeUser: async (parent, { userId }) => {
+      return Profile.findOneAndDelete(
+        { _id: userId });
+    },
     //For add bug
     addBug: async (parent, { userId, bug }, context) => {
       if (context.user) {
@@ -61,7 +64,8 @@ const resolvers = {
 
 
       //may need delete bug mutation needed?
-      //may need delete user mutation?
+
+    
 
       throw AuthenticationError;
     },
