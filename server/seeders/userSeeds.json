@@ -1,7 +1,26 @@
 [
   {
-    "username": "testuser",
-    "email": "test@user.com",
-    "password": "password1234"
+    "username": "Shyla",
+    "email": "Shyla@bugs.com",
+    "password": "bugs123",
+    "bugs": ["BEES", "SPOODER"]
+  },
+  {
+    "username": "Jesse",
+    "email": "Jesse@bugs.com",
+    "password": "bugs123",
+    "bugs": ["Ant", "Cheese Bug"]
+  },
+  {
+    "username": "Rachael",
+    "email": "Rachael@bugs.com",
+    "password": "bugs123",
+    "bugs": ["Ant", "Zaddy Long Legs"]
+  },
+  {
+    "username": "Daymen",
+    "email": "Daymen@bugs.com",
+    "password": "bugs123",
+    "bugs": ["Ant"]
   }
 ]
