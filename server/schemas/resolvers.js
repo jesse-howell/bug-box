@@ -19,6 +19,7 @@ const resolvers = {
   },
 
   Mutation: {
+    //For adding user
     addUser: async (_, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -40,7 +41,34 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    }
+    },
+
+
+    //For add bug
+    addBug: async (parent, { userId, bug }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: userId },
+          {
+            $addToSet: { bugs: bug },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+
+
+      //may need delete bug mutation needed?
+      //may need delete user mutation?
+
+      throw AuthenticationError;
+    },
+
+
+
+
   }
 };
 

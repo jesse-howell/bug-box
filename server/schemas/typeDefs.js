@@ -1,9 +1,13 @@
 const typeDefs = `#graphql
+#maybe mandatory on username email password
+#bugs was previously mandatory
   type User {
     _id: ID
     username: String
     email: String
     password: String
+    bugs: [String]
+    
   }
 
   type Auth {
@@ -20,7 +24,10 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
+    addBug(userId: ID!, bug: String!): User
   }
+  #may need delete bug 
+  #may need delete user
 `;
 
 module.exports = typeDefs;

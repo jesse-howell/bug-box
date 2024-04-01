@@ -17,8 +17,20 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    minlength: 5,
-  }
+    //alphaNumberic
+    //dontNeedSpecialChars
+    minlength: 8,
+    maxlength: 12,
+  },
+  bugs: [
+    {
+      type: String,
+      trim: true,
+    },
+  ],
+  //possible
+  //location slot {}
+  //pronoun slot {}
 });
 
 userSchema.pre('save', async function (next) {
