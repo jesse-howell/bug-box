@@ -52,10 +52,10 @@ const resolvers = {
         { _id: userId });
     },
     //For add bug
-    addBug: async (parent, { userId, bug }, context) => {
+    addBug: async (parent, { bug }, context) => {
       // if (context.user) {
         return User.findOneAndUpdate(
-          { _id: userId },
+          { _id: context.user._id },
           {
             $addToSet: { bugs: bug },
           },
@@ -65,15 +65,25 @@ const resolvers = {
           },
 
         );
-      // }
-
-      //may need delete bug mutation needed?
-
+      // throw new GraphQLError('User not authorized');
+    },
+    // For delete bug
+    removeBug: async (parent, { bug }, context) => {
+      // if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $pull: { bugs: bug },
+          },
+          {
+            new: true,
+          },
+        );
+      // throw new GraphQLError('User not authorized');
+   }
     
 
-      throw new GraphQLError('User not authorized');
 
-    },
 
 
 
