@@ -18,10 +18,6 @@ const resolvers = {
     },
   },
 
-
-
-
-
   Mutation: {
     //For adding user
     addUser: async (_, args) => {
@@ -47,15 +43,22 @@ const resolvers = {
       return { token, user };
     },
     //Remove a user RS 040124
-    removeUser: async (parent, { userId }) => {
-      return User.findOneAndDelete(
-        { _id: userId });
-    },
+    // need to implement a tab/button somewhere on pg or user dashboard to facilitate this
+    // need to change so that only a user can delete their own profile - ck module 21 act 25 for details
+    // removeUser: async (parent, { userId }) => {
+    //   return User.findOneAndDelete(
+    //     { _id: userId });
+    // },
+
     //For add bug
+    // TODO: remove userId field from {} to limit who can remove
     addBug: async (parent, { userId, bug }, context) => {
       // if (context.user) {
         return User.findOneAndUpdate(
-          { _id: userId },
+          // { _id: context.user._id },
+          { 
+            _id: userId 
+          },
           {
             $addToSet: { bugs: bug },
           },
@@ -63,25 +66,29 @@ const resolvers = {
             new: true,
             runValidators: true,
           },
-
         );
       // }
-
-      //may need delete bug mutation needed?
-
-    
-
       throw new GraphQLError('User not authorized');
-
     },
-
-
-
-
-
-
-
-
+    // For delete bug
+    // TODO: remove userId field from {} to limit who can remove
+    removeBug: async (parent, { userId, bug }, context) => {
+      // if (context.user) {
+        return User.findOneAndUpdate(
+          // { _id: context.user._id },
+          { 
+            _id: userId 
+          },
+          {
+            $pull: { bugs: bug },
+          },
+          {
+            new: true,
+          },
+        );
+      // }
+      throw new GraphQLError('User not authorized');
+    }
   }
 };
 

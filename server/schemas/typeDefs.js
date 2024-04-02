@@ -24,11 +24,12 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
+    # TODO: remove userId value when make other context.user changes
     addBug(userId: ID!, bug: String!): User
     removeUser(userId: ID!): User
+    # TODO: remove userId value when make other context.user changes
+    removeBug(userId: ID!, bug: String!): User
   }
-  #may need delete bug 
- 
 `;
 
 module.exports = typeDefs;

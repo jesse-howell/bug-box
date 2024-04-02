@@ -17,10 +17,11 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
-    //alphaNumberic
-    //dontNeedSpecialChars
-    minlength: 8,
-    maxlength: 12,
+    //alphaNumeric
+    //will not accept special characters
+    minlength: [8, 'Password needs at least 8 alphanumeric characters!'],
+    maxlength: [12, 'Password must have no more than 12 alphanumeric characters!'],
+    match: [/[a-zA-Z0-9]+/, 'Password can only contain alphanumeric characters!'],
   },
   bugs: [
     {
