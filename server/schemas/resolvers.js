@@ -46,6 +46,11 @@ const resolvers = {
 
       return { token, user };
     },
+    //Remove a user RS 040124
+    removeUser: async (parent, { userId }) => {
+      return Profile.findOneAndDelete(
+        { _id: userId });
+    },
     //Delete a user RS 040124
     removeUser: async (parent, { userId }) => {
       return Profile.findOneAndDelete(
@@ -68,7 +73,8 @@ const resolvers = {
       // }
 
       //may need delete bug mutation needed?
-      //may need delete user mutation?
+
+    
 
       throw new GraphQLError('User not authorized');
 
