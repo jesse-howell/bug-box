@@ -25,9 +25,10 @@ const typeDefs = `#graphql
     addUser(email:String!, username:String!, password:String!): Auth
     login(email:String!, password:String!): Auth
     addBug(userId: ID!, bug: String!): User
+    removeUser(userId: ID!): User
   }
   #may need delete bug 
-  #may need delete user
+ 
 `;
 
 module.exports = typeDefs;
