@@ -48,7 +48,7 @@ const resolvers = {
     },
     //Remove a user RS 040124
     removeUser: async (parent, { userId }) => {
-      return Profile.findOneAndDelete(
+      return User.findOneAndDelete(
         { _id: userId });
     },
     //For add bug
