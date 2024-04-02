@@ -6,7 +6,7 @@ const typeDefs = `#graphql
     username: String
     email: String
     password: String
-    bugs: [String]
+    bugs: [String]!
     
   }
 
