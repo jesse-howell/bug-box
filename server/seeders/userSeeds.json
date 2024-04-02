@@ -2,25 +2,25 @@
   {
     "username": "Shyla",
     "email": "Shyla@bugs.com",
-    "password": "bugs123",
+    "password": "bugs12345678",
     "bugs": ["BEES", "SPOODER"]
   },
   {
     "username": "Jesse",
     "email": "Jesse@bugs.com",
-    "password": "bugs123",
+    "password": "bugs12345678",
     "bugs": ["Ant", "Cheese Bug"]
   },
   {
     "username": "Rachael",
     "email": "Rachael@bugs.com",
-    "password": "bugs123",
+    "password": "bugs12345678",
     "bugs": ["Ant", "Zaddy Long Legs"]
   },
   {
     "username": "Daymen",
     "email": "Daymen@bugs.com",
-    "password": "bugs123",
+    "password": "bugs12345678",
     "bugs": ["Ant"]
   }
 ]

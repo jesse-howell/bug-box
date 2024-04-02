@@ -18,6 +18,10 @@ const resolvers = {
     },
   },
 
+
+
+
+
   Mutation: {
     //For adding user
     addUser: async (_, args) => {
@@ -46,7 +50,7 @@ const resolvers = {
 
     //For add bug
     addBug: async (parent, { userId, bug }, context) => {
-      if (context.user) {
+      // if (context.user) {
         return User.findOneAndUpdate(
           { _id: userId },
           {
@@ -55,16 +59,21 @@ const resolvers = {
           {
             new: true,
             runValidators: true,
-          }
-        );
-      }
+          },
 
+        );
+      // }
 
       //may need delete bug mutation needed?
       //may need delete user mutation?
 
-      throw AuthenticationError;
+      throw new GraphQLError('User not authorized');
+
     },
+
+
+
+
 
 
 
