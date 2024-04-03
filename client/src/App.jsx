@@ -38,6 +38,7 @@ function App() {
     <ApolloProvider client={client}>
       <Navbar />
       <Outlet />
+      <Footer />
     </ApolloProvider>
   );
 }
