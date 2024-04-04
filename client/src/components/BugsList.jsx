@@ -1,7 +1,8 @@
-//import { useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 
-//import { REMOVE_BUG } from '../../utils/mutations';
-//import { QUERY_ME } from '../../utils/queries';
+import { REMOVE_BUG } from '../../utils/mutations';
+import { ADD_BUG } from '../../utils/mutations';
+import { QUERY_ME } from '../../utils/queries';
 
 
 //tentative code, framework can be altered as needed RS032824
@@ -13,6 +14,8 @@ const BugsList = ({ bugs, isLoggedInUser = false }) => {
       'me'
     ]
   });
+
+  // TODO: add a handleAddBug
 
   const handleRemoveBug = async (bug) => {
     try {
