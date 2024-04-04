@@ -7,9 +7,7 @@ import Auth from '../utils/auth';
 import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 
 // Components
-import UserList from '../components/UserList';
-
-import Footer from '../components/Footer';
+// import UserList from '../components/UserList';
 
 const Profile = () => {
   const { id } = useParams();
@@ -44,36 +42,35 @@ const Profile = () => {
       </h4>
     );
   }
-
-  const renderUserList = () => {
-    if (usersLoading) return null;
-    // Only renders users who's profile we're not currently viewing
-    const notMeUsers = users.filter(o => o._id !== user._id);
-    return <UserList users={notMeUsers} title="User List" />;
-  };
-
-  const renderCurrentUserInfo = () => {
-    if (id) return null;
-    return (
-      <ul>
-        <li>username: {user.username}</li>
-        <li>email: {user.email}</li>
-      </ul>
-    );
-  }
-
-  return (
-    <div>
-      <div>
-        <h2>
-          Viewing {id ? `${user.username}'s` : 'your'} profile.
-        </h2>
-        {renderCurrentUserInfo()}
-        {renderUserList()}
-      </div>
-      <Footer />
-    </div>
-  );
 };
+//   const renderUserList = () => {
+//     if (usersLoading) return null;
+//     // Only renders users who's profile we're not currently viewing
+//     const notMeUsers = users.filter(o => o._id !== user._id);
+//     return <UserList users={notMeUsers} title="User List" />;
+//   };
+
+//   const renderCurrentUserInfo = () => {
+//     if (id) return null;
+//     return (
+//       <ul>
+//         <li>username: {user.username}</li>
+//         <li>email: {user.email}</li>
+//       </ul>
+//     );
+//   }
+
+//   return (
+//     <div>
+//       <div>
+//         <h2>
+//           Viewing {id ? `${user.username}'s` : 'your'} profile.
+//         </h2>
+//         {renderCurrentUserInfo()}
+//         {renderUserList()}
+//       </div>
+//     </div>
+//   );
+// };
 
 export default Profile;

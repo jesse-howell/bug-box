@@ -7,6 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
+// components to be rendered on all pages
 import Navbar from './components/Navbar';
 
 // Construct our main GraphQL API endpoint
