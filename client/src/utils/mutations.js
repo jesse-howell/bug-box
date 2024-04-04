@@ -25,3 +25,24 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+export const ADD_BUG = gql`
+  mutation addBug($userId: ID!, $bug: String!) {
+    addBug(userId: $userId, bug: $bug) {
+      _id
+      username
+      bugs
+    }
+  }
+`;
+
+export const REMOVE_BUG = gql`
+  mutation removeBug($bug: String!) {
+    removeBug(bug: $bug) {
+      _id
+      username
+      bugs
+    }
+  }
+`;
