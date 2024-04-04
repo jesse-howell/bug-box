@@ -1,3 +1,5 @@
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
 import { REMOVE_BUG } from '../../utils/mutations';
@@ -8,7 +10,7 @@ import { QUERY_ME } from '../../utils/queries';
 //tentative code, framework can be altered as needed RS032824
 const BugsList = ({ bugs, isLoggedInUser = false }) => {
   const [removeBug, { error }] = useMutation
-  (REMOVE_Bug, {
+  (REMOVE_BUG, {
     refetchQueries: [
       QUERY_ME,
       'me'
@@ -27,7 +29,7 @@ const BugsList = ({ bugs, isLoggedInUser = false }) => {
     }
   };
 
-  if (!bug.length) {
+  if (!bugs.length) {
     return <h3>No Bugs Yet</h3>;
   }
 
@@ -35,7 +37,7 @@ const BugsList = ({ bugs, isLoggedInUser = false }) => {
     <div>
       <div className="flex-row justify-space-between my-4">
         {bugs &&
-          bugs.map((bugs) => (
+          bugs.map((bug) => (
             <div key={bug} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
