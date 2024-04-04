@@ -12,6 +12,8 @@ export const LOGIN_USER = gql`
   }
 `;
 
+// TODO: add export const UPDATE_USER = gql
+
 export const ADD_USER = gql`
   mutation addUser($username: String!, $email: String!, $password: String!) {
     addUser(username: $username, email: $email, password: $password) {
