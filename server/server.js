@@ -4,7 +4,7 @@ const path = require('path');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const { authMiddleware } = require('./utils/auth');
-const { UserList } = require('../client/src/components/UserList');
+// const { UserList } = require('../client/src/components/UserList'); - not necessary
 // Import the two parts of a GraphQL schema
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
