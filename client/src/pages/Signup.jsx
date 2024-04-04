@@ -6,9 +6,6 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// components
-import Footer from '../components/Footer';
-
 const Signup = () => {
   const [formState, setFormState] = useState({
     username: '',
@@ -50,7 +47,7 @@ const Signup = () => {
       )
     } 
     return (
-      <><form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <input
           placeholder="Your username"
           name="username"
@@ -72,9 +69,7 @@ const Signup = () => {
         <button type="submit">
           Submit
         </button>
-      </form><>
-          <Footer />
-        </></>
+      </form>
     );
   };
 
@@ -85,7 +80,6 @@ const Signup = () => {
         {renderForm()}
         {error && <div>{error.message}</div>}
       </div>
-      <Footer />
     </main>
   );
 };

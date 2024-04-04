@@ -23,6 +23,7 @@ module.exports = {
       console.log('db connection closed');
     }
   },
+
   // create user
   async createUser(req, res) {
     try {
@@ -34,8 +35,22 @@ module.exports = {
     }
   },
 
-  // get all users
-  async getAllUsers(req, res) {
+  // get single user by id
+  async getSingleUser(req, res) {
+    try {
+      const user = await User.findOne({ _id: req.params.userId }).select('-__v');
+      if(!user) {
+        return res.status(404).json({ message: 'No user found with that ID.' });
+      }
+      res.json(user);
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    } 
+  },
+
+   // get all users
+   async getAllUsers(req, res) {
     try {
       const getUsers = await User.find({});
       res.json(getUsers);
@@ -44,24 +59,25 @@ module.exports = {
     }
   },
 
+  // putting this on backburner for now
   // update user by ID
-  async updateUser(req, res) {
-    try {
-      const updatedUser = await User.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        {
-          new: true,
-        }
-      );
-      if (!updatedUser) {
-        return res.status(404).json({ message: 'No user found with that ID.' });
-      }
-      res.json({ message: 'User updated successfully', updatedUser });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  },
+  // async updateUser(req, res) {
+  //   try {
+  //     const updatedUser = await User.findByIdAndUpdate(
+  //       req.params.id,
+  //       req.body,
+  //       {
+  //         new: true,
+  //       }
+  //     );
+  //     if (!updatedUser) {
+  //       return res.status(404).json({ message: 'No user found with that ID.' });
+  //     }
+  //     res.json({ message: 'User updated successfully', updatedUser });
+  //   } catch (err) {
+  //     res.status(500).json(err);
+  //   }
+  // },
 
   // delete user by ID
   async deleteUser(req, res) {
