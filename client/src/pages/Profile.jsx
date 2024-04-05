@@ -2,6 +2,10 @@
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
+
+import BugsList from '../components/BugsList';
+import BugForm from '../components/BugsList';
+
 // Utilities
 import Auth from '../utils/auth';
 import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -10,12 +14,15 @@ import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 // import UserList from '../components/UserList';
 
 const Profile = () => {
-  const { id } = useParams();
+  const { userId } = useParams();
 
   // Get current user
-  const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
-    variables: { id },
-  });
+  const { loading, data, error } = useQuery(
+    userId ? QUERY_USER : QUERY_ME, 
+    {
+      variables: { userId: userId },
+    }
+  );
 
   // Get a list of all users
   const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
@@ -25,7 +32,7 @@ const Profile = () => {
 
   if (error) console.log(error);
 
-  // redirect to personal profile page if username is yours
+  // redirect to personal user page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data._id === id) {
     return <Navigate to="/me" replace />;
   }
@@ -42,6 +49,40 @@ const Profile = () => {
       </h4>
     );
   }
+
+
+
+  return (
+    <div>
+    <h2 className="card-header">
+      {userId ? `${user.name}'s` : 'Your'} friends have endorsed these
+      bugss...
+    </h2>
+
+    {user.bugs?.length > 0 && (
+      <BugsList
+        bugs={user.bugs}
+        isLoggedInUser={!userId && true}
+      />
+    )}
+
+    <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <BugForm profileId={user._id} />
+
+
+        <div>
+     <div>
+        <h2>
+          Viewing {id ? `${user.username}'s` : 'your'} profile.
+     </h2>
+       {renderCurrentUserInfo()}
+        {renderUserList()}
+     </div>
+     </div>
+
+    </div>
+  </div>
+  )
 };
 //   const renderUserList = () => {
 //     if (usersLoading) return null;

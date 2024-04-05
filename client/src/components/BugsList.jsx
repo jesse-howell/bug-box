@@ -1,10 +1,8 @@
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { REMOVE_BUG } from '../../utils/mutations';
-import { ADD_BUG } from '../../utils/mutations';
-import { QUERY_ME } from '../../utils/queries';
+import { REMOVE_BUG } from '../utils/mutations';
+import { ADD_BUG } from '../utils/mutations';
+import { QUERY_ME } from '../utils/queries';
 
 
 //tentative code, framework can be altered as needed RS032824
