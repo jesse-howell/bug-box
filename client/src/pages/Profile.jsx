@@ -12,13 +12,14 @@ import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 
 // Components
 // import UserList from '../components/UserList';
+import Footer from '../components/Footer';
 
 const Profile = () => {
   const { userId } = useParams();
 
   // Get current user
   const { loading, data, error } = useQuery(
-    userId ? QUERY_USER : QUERY_ME, 
+    userId ? QUERY_USER : QUERY_ME,
     {
       variables: { userId: userId },
     }
@@ -43,10 +44,13 @@ const Profile = () => {
 
   if (!user?.username) {
     return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
+      <>
+        <h4>
+          You need to be logged in to see this. Use the navigation links above to
+          sign up or log in!
+        </h4>
+        <Footer />
+      </>
     );
   }
 
@@ -54,34 +58,33 @@ const Profile = () => {
 
   return (
     <div>
-    <h2 className="card-header">
-      {userId ? `${user.name}'s` : 'Your'} friends have endorsed these
-      bugss...
-    </h2>
+      <h2 className="card-header">
+        {userId ? `${user.name}'s` : 'Your'} friends have endorsed these
+        bugss...
+      </h2>
 
-    {user.bugs?.length > 0 && (
-      <BugsList
-        bugs={user.bugs}
-        isLoggedInUser={!userId && true}
-      />
-    )}
+      {user.bugs?.length > 0 && (
+        <BugsList
+          bugs={user.bugs}
+          isLoggedInUser={!userId && true}
+        />
+      )}
 
-    <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
-      <BugForm profileId={user._id} />
+      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+        <BugForm profileId={user._id} />
 
 
         <div>
-     <div>
-        <h2>
-          Viewing {id ? `${user.username}'s` : 'your'} profile.
-     </h2>
-       {renderCurrentUserInfo()}
-        {renderUserList()}
-     </div>
-     </div>
-
+          <div>
+            <h2>
+              Viewing {id ? `${user.username}'s` : 'your'} profile.
+            </h2>
+            {renderCurrentUserInfo()}
+            {renderUserList()}
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   )
 };
 //   const renderUserList = () => {
