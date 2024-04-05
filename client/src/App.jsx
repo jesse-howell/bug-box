@@ -40,11 +40,11 @@ function App() {
   return (
     <>
       <ApolloProvider client={client}>
-        <main>
-          <Outlet />
+        <body>
           <Navbar />
+          <Outlet />
           <Footer />
-        </main>
+        </body>
       </ApolloProvider>
     </>
   );

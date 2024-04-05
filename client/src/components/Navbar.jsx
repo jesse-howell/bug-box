@@ -10,30 +10,44 @@ function Navbar() {
   if (Auth.loggedIn()) {
     return (
       <>
-        <Link to="/">
+      <ul class="flex">
+        <li class="mr-6">
+        <a class="text-lime-600 hover:text-lime-800" href="/">
           Home
-        </Link>
-        <Link to="/me">
+        </a>
+        </li>
+        <li>
+        <a class="text-lime-600 hover:text-lime-800" href="/me">
           {Auth.getProfile().data.username}&lsquo;s profile
-        </Link>
+        </a>
+        </li>
         <button onClick={logout}>
           Logout
         </button>
+        </ul>
       </>
     );
   }
   // If logged out show login controls
   return (
     <>
-      <Link to="/">
+    <ul class="flex">
+      <li class="mr-6">
+      <a class="text-lime-600 hover:text-lime-800" href="/">
         Home
-      </Link>
-      <Link to="/login">
+      </a>
+      </li>
+      <li class="mr-6">
+      <a class="text-lime-600 hover:text-lime-800" href="/login">
         Login
-      </Link>
-      <Link to="/signup">
+      </a>
+      </li>
+      <li class="mr-6">
+      <a class="text-lime-600 hover:text-lime-800" href="/signup">
         Signup
-      </Link>
+      </a>
+      </li>
+      </ul>
     </>
   );
 }

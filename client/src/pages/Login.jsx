@@ -73,7 +73,7 @@ const Login = () => {
         />
         </div>
         <div class= "flex items-center justify-between">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        <button class="bg-lime-400 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
           Login
         </button>
         </div>
@@ -82,15 +82,18 @@ const Login = () => {
   };
 
   return (
-    <main>
-      <div class="w-full max-w-xs">
+      <>
+      <div class="container-fluid">
+      <div class="h-14 bg-gradient-to-r from-lime-200 to-lime-700">
       <h4>Login</h4>
-      <div>
+      
         {renderForm()}
         {error && <div>{error.message}</div>}
       </div>
       </div>
-    </main>
+      </>
+      
+    
   );
 };
 
