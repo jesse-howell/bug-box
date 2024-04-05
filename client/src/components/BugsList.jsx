@@ -27,36 +27,36 @@ const BugsList = ({ bugs, isLoggedInUser = false }) => {
     }
   };
 
-  if (!bugs.length) {
+  if (!bugs?.length) {
     return <h3>No Bugs Yet</h3>;
   }
 
   return (
     <div>
-      <div className="flex-row justify-space-between my-4">
-        {bugs &&
-          bugs.map((bug) => (
-            <div key={bug} className="col-12 col-xl-6">
-              <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
-                  <span>{bug}</span>
-                  {isLoggedInUser && (
-                    <button
-                      className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemoveBug(bug)}
-                    >
-                      X
-                    </button>
-                  )}
-                </h4>
-              </div>
+    <div className="flex-row justify-space-between my-4">
+      {bugs &&
+        bugs.map((bug) => (
+          <div key={bug} className="col-12 col-xl-6">
+            <div className="card mb-3">
+              <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
+                <span>{bug}</span>
+                {isLoggedInUser && (
+                  <button
+                    className="btn btn-sm btn-danger ml-auto"
+                    onClick={() => handleRemoveBug(bug)}
+                  >
+                    X
+                  </button>
+                )}
+              </h4>
             </div>
-          ))}
-      </div>
-      {error && (
-        <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
-      )}
+          </div>
+        ))}
     </div>
+    {error && (
+      <div className="my-3 p-3 bg-danger text-white">{error.message}</div>
+    )}
+  </div>
   );
 };
 
