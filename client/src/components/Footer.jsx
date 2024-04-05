@@ -2,11 +2,12 @@ import { IoHeart } from "react-icons/io5";
 
 function Footer() {
     return(
-        <footer style={{
-            textAlign: "center",
-            textJustify: "auto",
-            fontSize: "3em",
-        }}>
+        // <footer style={{
+        //     textAlign: "center",
+        //     textJustify: "auto",
+        //     fontSize: "1em",
+        // }}>
+        <footer>
             <div>
                 <b>made with love <IoHeart /></b>
             </div>

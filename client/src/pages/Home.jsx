@@ -2,6 +2,8 @@ import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
 
 // import UserList from "../components/UserList";
+// components
+import Footer from '../components/Footer';
 
 
 function Home() {
@@ -21,6 +23,7 @@ function Home() {
   return (
     <>
       <div>Home</div>
+      <Footer />
       {/* <UserList users={users} /> */}
     </>
   );
