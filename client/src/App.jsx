@@ -9,7 +9,7 @@ import { setContext } from '@apollo/client/link/context';
 
 // components
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 
 // Construct our main GraphQL API endpoint
@@ -43,7 +43,7 @@ function App() {
         <body>
           <Navbar />
           <Outlet />
-          <Footer />
+          {/* <Footer /> */}
         </body>
       </ApolloProvider>
     </>
