@@ -5,7 +5,7 @@ function Footer() {
         <footer style={{
             textAlign: "center",
             textJustify: "auto",
-            fontSize: "3em",
+            fontSize: "1em",
         }}>
             <div>
                 <b>made with love <IoHeart /></b>
