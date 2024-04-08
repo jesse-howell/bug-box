@@ -59,9 +59,9 @@ const Profile = () => {
         />
       )}
 
-      {/* <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <BugForm userId={user._id} />
-      </div> */}
+      </div>
     </div>
   );
 
