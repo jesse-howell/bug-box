@@ -16,8 +16,8 @@ const typeDefs = `#graphql
   }
 
   type Query {
-    users: [User]
-    user(id: ID!): User
+    users: [User]!
+    user(userId: ID!): User
     me: User
   }
 
@@ -29,7 +29,7 @@ const typeDefs = `#graphql
     addBug(userId: ID!, bug: String!): User
     removeUser(userId: ID!): User
     # TODO: remove userId value when make other context.user changes
-    removeBug(userId: ID!, bug: String!): User
+    removeBug(bug: String!): User
     # TODO: need to add a updateBug mutation???
   }
 `;
