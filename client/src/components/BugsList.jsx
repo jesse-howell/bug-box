@@ -1,7 +1,6 @@
 import { useMutation } from '@apollo/client';
 
 import { REMOVE_BUG } from '../utils/mutations';
-import { ADD_BUG } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 
 
@@ -14,8 +13,6 @@ const BugsList = ({ bugs, isLoggedInUser = false }) => {
       'me'
     ]
   });
-
-  // TODO: add a handleAddBug
 
   const handleRemoveBug = async (bug) => {
     try {
