@@ -50,6 +50,9 @@ const Signup = () => {
       )
     } 
     return (
+      <section style={{
+        padding: "20px",
+      }}>
       <form onSubmit={handleFormSubmit}>
         <input
           placeholder="Your username"
@@ -73,18 +76,28 @@ const Signup = () => {
           Submit
         </button>
       </form>
+      </section>
     );
   };
 
   return (
+    <section style={{
+      padding: "20px",
+      color: "#577400",
+    }}>
+      <body>
     <main>
-      <h4>Sign Up</h4>
+      <article>
       <div>
+      <h4>Sign Up</h4>
         {renderForm()}
+      </div>
+      </article>
         <Footer />
         {error && <div>{error.message}</div>}
-      </div>
     </main>
+    </body>
+    </section>
   );
 };
 
