@@ -48,8 +48,8 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userId ? `${user.username}'s` : 'Your'} friends have endorsed these
-        bugs...
+        {/* msg could also be "bug list..." */}
+        {userId ? `${user.username}'s` : 'Your'} bugs... 
       </h2>
 
       {user.bugs?.length > 0 && (
@@ -62,6 +62,7 @@ const Profile = () => {
       <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <BugForm userId={user._id} />
       </div>
+      <Footer />
     </div>
   );
 
