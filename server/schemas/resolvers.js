@@ -43,12 +43,13 @@ const resolvers = {
       return { token, user };
     },
 
-    updateUsername: async (parent, { userId, username }, context) => {
-      // if (context.user) {
+    updateUsername: async (parent, { username }, context) => {
+      if (context.user) {
       return User.findOneAndUpdate(
-        // { _id: context.user._id },
+        // { _id: userId },
         {
-          _id: userId
+          
+          _id: context.user._id
         },
         {
           $set: { username: username },
@@ -58,7 +59,7 @@ const resolvers = {
           runValidators: true,
         },
       );
-      // }
+      }
       throw new GraphQLError('User not authorized');
     },
 
