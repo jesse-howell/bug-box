@@ -39,6 +39,13 @@ const client = new ApolloClient({
 function App() {
   return (
     <>
+      <section style={{
+      padding: "20px",
+      backgroundColor: "#FCDCC1",
+      
+     
+     
+    }}>
       <ApolloProvider client={client}>
         <body>
           <Navbar />
@@ -46,6 +53,7 @@ function App() {
           {/* <Footer /> */}
         </body>
       </ApolloProvider>
+      </section>
     </>
   );
 }
