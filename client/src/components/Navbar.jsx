@@ -11,7 +11,7 @@ function Navbar() {
     return (
       <nav>
       <ul>
-        <li class="pico-color-lime-550"><strong>Bug Box</strong></li>
+        <li><strong>Bug Box</strong></li>
       </ul>
       <ul>
         <li><a href="/">Home</a></li>
