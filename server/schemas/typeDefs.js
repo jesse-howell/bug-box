@@ -24,7 +24,7 @@ const typeDefs = `#graphql
   type Mutation {
     addUser(email: String!, username: String!, password: String!): Auth
     login(email:String!, password:String!): Auth
-    updateUsername(userId: ID!, username: String!): User
+    updateUsername( username: String!): User
     # TODO: remove userId value when make other context.user changes
     addBug(userId: ID!, bug: String!): User
     removeUser(userId: ID!): User
