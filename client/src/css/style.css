@@ -1,11 +1,1 @@
-/* Enabled if forced with data-theme="light" */
-[data-theme=light] {
-    --pico-text-selection-color: rgba(245, 107, 61, 0.1875);
-    --pico-primary: #f56b3d;
-    --pico-primary-background: #d24317;
-    --pico-primary-underline: rgba(245, 107, 61, 0.5);
-    --pico-primary-hover: #f8a283;
-    --pico-primary-hover-background: #e74b1a;
-    --pico-primary-focus: rgba(245, 107, 61, 0.375);
-    --pico-primary-inverse: #fff;
-  }
+

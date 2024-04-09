@@ -8,7 +8,7 @@ import BugForm from '../components/BugForm';
 
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 // Components
 // import UserList from '../components/UserList';
@@ -48,8 +48,8 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userId ? `${user.username}'s` : 'Your'} friends have endorsed these
-        bugss...
+        {/* msg could also be "bug list..." */}
+        {userId ? `${user.username}'s` : 'Your'} bugs... 
       </h2>
 
       {user.bugs?.length > 0 && (
@@ -59,14 +59,12 @@ const Profile = () => {
         />
       )}
 
-      {/* <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="my-4 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <BugForm userId={user._id} />
-      </div> */}
+      </div>
+      <Footer />
     </div>
   );
-
-
-
 
 
 //   // Get a list of all users

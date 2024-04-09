@@ -93,12 +93,13 @@ const resolvers = {
 
     // For delete bug
     // TODO: remove userId field from {} to limit who can remove
-    removeBug: async (parent, { userId, bug }, context) => {
-      // if (context.user) {
-      return User.findOneAndUpdate(
-        // { _id: context.user._id },
+    removeBug: async (parent, { bug }, context) => {
+      if (context.user) {
+      return User.findByIdAndUpdate(
+        // { _id: userId },
         {
-          _id: userId
+          
+          _id: context.user._id
         },
         {
           $pull: { bugs: bug },
@@ -107,7 +108,7 @@ const resolvers = {
           new: true,
         },
       );
-      // }
+      }
       throw new GraphQLError('User not authorized');
     }
   }
