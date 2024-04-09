@@ -26,10 +26,11 @@ const userSchema = new Schema({
   bugs: [
     {
       type: String,
+      uppercase: true,
       trim: true,
     },
   ],
-  //possible
+  //possible later implmentation
   //location slot {}
   //pronoun slot {}
 });
