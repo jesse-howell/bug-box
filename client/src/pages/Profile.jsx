@@ -67,9 +67,6 @@ const Profile = () => {
   );
 
 
-
-
-
 //   // Get a list of all users
 //   const { usersLoading, data: usersData } = useQuery(QUERY_USERS);
 
