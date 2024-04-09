@@ -49,7 +49,7 @@ const Profile = () => {
     <div>
       <h2 className="card-header">
         {userId ? `${user.username}'s` : 'Your'} friends have endorsed these
-        bugss...
+        bugs...
       </h2>
 
       {user.bugs?.length > 0 && (
