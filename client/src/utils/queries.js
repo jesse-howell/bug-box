@@ -33,4 +33,3 @@ export const QUERY_ME = gql`
   }
 `;
 
-// do we need a query for bugs???
