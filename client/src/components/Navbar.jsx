@@ -9,46 +9,30 @@ function Navbar() {
   
   if (Auth.loggedIn()) {
     return (
-      <>
-      <ul class="flex">
-        <li class="mr-6">
-        <a class="text-lime-600 hover:text-lime-800" href="/">
-          Home
-        </a>
-        </li>
-        <li>
-        <a class="text-lime-600 hover:text-lime-800" href="/me">
-          {Auth.getProfile().data.username}&lsquo;s profile
-        </a>
-        </li>
-        <button onClick={logout}>
-          Logout
-        </button>
-        </ul>
-      </>
+      <nav>
+      <ul>
+        <li class="pico-color-lime-550"><strong>Bug Box</strong></li>
+      </ul>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/me">{Auth.getProfile().data.username}&lsquo;s profile</a></li>
+        <button onClick={logout}>Logout</button>
+      </ul>
+      </nav>
     );
   }
   // If logged out show login controls
   return (
-    <>
-    <ul class="flex">
-      <li class="mr-6">
-      <a class="text-lime-600 hover:text-lime-800" href="/">
-        Home
-      </a>
-      </li>
-      <li class="mr-6">
-      <a class="text-lime-600 hover:text-lime-800" href="/login">
-        Login
-      </a>
-      </li>
-      <li class="mr-6">
-      <a class="text-lime-600 hover:text-lime-800" href="/signup">
-        Signup
-      </a>
-      </li>
+    <nav>
+      <ul>
+        <li><strong>Bug Box</strong></li>
       </ul>
-    </>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/login">Login</a></li>
+      <li><a href="/signup">Signup</a></li>
+      </ul>
+    </nav>
   );
 }
 
