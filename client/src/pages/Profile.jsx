@@ -8,7 +8,7 @@ import BugForm from '../components/BugForm';
 
 // Utilities
 import Auth from '../utils/auth';
-import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 // Components
 // import UserList from '../components/UserList';
