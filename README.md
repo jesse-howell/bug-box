@@ -9,10 +9,10 @@
 [Links](#links)   
 
 ## Description
-Our final project for our full stack coding bootcamp program.
+ - An app that gives people a fun and adorable place to keep track of the bugs they’ve found!
 
 ## Technologies Used
-Instructor provided boilerplate code to setup a MERN Apollo Server/Client Application using a Mongo database.
+ - MERN Stack, GraphQL and Apollo Client, Autoprefixer
 
 ## License
 
