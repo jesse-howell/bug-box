@@ -75,7 +75,7 @@ const Login = () => {
         value={formState.password}
         onChange={handleChange} />
       </fieldset>
-      <button type="submit" class="pico-background-orange-600">
+      <button type="submit" class="pico-bakground-orange-600">
         Submit
       </button>
     </form>
@@ -93,11 +93,11 @@ const Login = () => {
         <article>
         <div>
           <h3>Login</h3>
-          {error && <div style={{ textAlign: 'center' }}>{error.message}</div>}
           {renderForm()}
         </div>
         </article>
-          <Footer />
+          {/* <Footer /> */}
+          {error && <div>{error.message}</div>}
       </main>
     </body>
     </section>

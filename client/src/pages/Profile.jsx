@@ -68,7 +68,7 @@ const Profile = () => {
           <UserForm userId={user._id} />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 
