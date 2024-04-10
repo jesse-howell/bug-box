@@ -42,10 +42,9 @@ function App() {
       <section style={{
       padding: "20px",
       backgroundColor: "#FCDCC1",
-      
-     
-     
+      height: "100vh", 
     }}>
+      
       <ApolloProvider client={client}>
         <body>
           <Navbar />
