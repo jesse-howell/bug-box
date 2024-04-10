@@ -27,7 +27,7 @@ const UserForm = ({ userId }) => {
 
     return (
       <div>
-      <h4>Click here to change your username (changes will apply next login)!</h4>
+      <h4>Click here to change your username.</h4>
 
       {Auth.loggedIn() ? (
         <form
@@ -36,7 +36,7 @@ const UserForm = ({ userId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="Enter a new username"
+              placeholder="Enter a new username (changes will apply next login)"
               value={username}
               className="form-input w-100"
               onChange={(event) => setUsername(event.target.value)}
