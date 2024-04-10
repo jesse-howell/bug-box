@@ -24,4 +24,4 @@
 
 ## Links
 [Github Repo](https://https://github.com/jesse-howell/bug-box)  
-[Deployed App](http://)  
+[Live URL](https://bug-box.onrender.com/) 
