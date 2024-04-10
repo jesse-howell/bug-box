@@ -20,8 +20,7 @@
 [Shyla](https://github.com/sailorshy94)  
 
 ## Screenshots
-[Screenshot-1]()  
-[Screenshot-2]()  
+![Screenshot-1](./assets/images/_%20Bug%20Box.jpeg)   
 
 ## Links
 [Github Repo](https://https://github.com/jesse-howell/bug-box)  
