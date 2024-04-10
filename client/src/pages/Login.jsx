@@ -75,7 +75,7 @@ const Login = () => {
         value={formState.password}
         onChange={handleChange} />
       </fieldset>
-      <button type="submit">
+      <button type="submit" class="pico-bakground-orange-600">
         Submit
       </button>
     </form>
