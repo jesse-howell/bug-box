@@ -61,13 +61,13 @@ const Profile = () => {
       )}
 
       <div className='my-4 p-4 grid' style={{ border: '1px dotted #1a1a1a' }}>
-          <div>
-            <BugForm userId={user._id} />
-          </div>
-          <div>
-            <UserForm userId={user._id} />
-          </div>
+        <div>
+          <BugForm userId={user._id} />
         </div>
+        <div>
+          <UserForm userId={user._id} />
+        </div>
+      </div>
       <Footer />
     </div>
   );
