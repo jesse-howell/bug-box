@@ -1,4 +1,4 @@
-# Bug-Box: A box for bugs!!
+# Bug Box: A box for bugs!!
 
 ## Table of Contents
 [Description](#description)  
