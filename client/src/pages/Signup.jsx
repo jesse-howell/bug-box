@@ -6,9 +6,6 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// components
-import Footer from '../components/Footer';
-
 const Signup = () => {
   const [formState, setFormState] = useState({
     username: '',
