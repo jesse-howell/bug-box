@@ -72,7 +72,7 @@ const Signup = () => {
           type="password"
           value={formState.password}
           onChange={handleChange} />
-        <button type="submit">
+        <button type="submit" class="pico-background-orange-600">
           Submit
         </button>
       </form>
