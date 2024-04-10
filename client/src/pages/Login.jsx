@@ -92,7 +92,6 @@ const Login = () => {
           {renderForm()}
         </div>
         </article>
-          {/* <Footer /> */}
           {error && <div>{error.message}</div>}
       </main>
     </body>

@@ -1,5 +1,4 @@
 import { useMutation } from '@apollo/client';
-
 import { REMOVE_BUG } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 
