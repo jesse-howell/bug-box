@@ -14,9 +14,9 @@ function Navbar() {
           <li><strong style={{ fontSize: '40px' }}>🐞 Bug Box!</strong></li>
         </ul>
         <ul>
-          <li><button class="pico-background-orange-500"><a href="/">Home</a></button></li>
-          <li><button class="pico-background-orange-500"><a href="/me">{Auth.getProfile().data.username}&lsquo;s profile</a></button></li>
-          <li><button class="pico-background-orange-500" onClick={logout}>Logout</button></li>
+          <li><button class="pico-background-orange-400"><a href="/">Home</a></button></li>
+          <li><button class="pico-background-orange-400"><a href="/me">{Auth.getProfile().data.username}&lsquo;s profile</a></button></li>
+          <li><button class="pico-background-orange-400" onClick={logout}>Logout</button></li>
         </ul>
       </nav>
     );
@@ -28,9 +28,9 @@ function Navbar() {
         <li><strong style={{ fontSize: '40px' }}>🐞 Bug Box!</strong></li>
       </ul>
       <ul>
-        <li><button type="submit" class="pico-background-orange-500"><a href="/">Home</a></button></li>
-        <li><button type="submit" class="pico-background-orange-500"><a href="/login">Login</a></button></li>
-        <li><button type="submit" class="pico-background-orange-500"><a href="/signup">Signup</a></button></li>
+        <li><button type="submit" class="pico-background-orange-400"><a href="/">Home</a></button></li>
+        <li><button type="submit" class="pico-background-orange-400"><a href="/login">Login</a></button></li>
+        <li><button type="submit" class="pico-background-orange-400"><a href="/signup">Signup</a></button></li>
       </ul>
     </nav>
   );

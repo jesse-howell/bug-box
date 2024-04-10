@@ -59,7 +59,6 @@ footer {
   font-weight: 400;
   line-height: 23px;
   text-align: center;
-  color: #577400;
 }
 
 a {
@@ -85,4 +84,23 @@ h2.card-header {
   line-height: 23px;
   color: green;
   text-align: center;
+}
+
+button {
+  --pico-border-radius: 1em;
+  font-family: 'Cabin Sketch';
+  --pico-font-size: 26px;
+}
+
+label,
+::placeholder {
+  font-family: 'Cabin Sketch';
+}
+
+.btn-danger {
+  background-color: orange;
+}
+
+.ml-auto {
+  color: black;
 }
