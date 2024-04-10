@@ -6,9 +6,6 @@ import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// components
-import Footer from '../components/Footer';
-
 const Signup = () => {
   const [formState, setFormState] = useState({
     username: '',
@@ -72,7 +69,7 @@ const Signup = () => {
           type="password"
           value={formState.password}
           onChange={handleChange} />
-        <button type="submit">
+        <button type="submit" class="pico-background-orange-600">
           Submit
         </button>
       </form>

@@ -5,9 +5,6 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-// components
-import Footer from '../components/Footer';
-
 const Login = () => {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -75,7 +72,7 @@ const Login = () => {
         value={formState.password}
         onChange={handleChange} />
       </fieldset>
-      <button type="submit" class="pico-bakground-orange-600">
+      <button type="submit" class="pico-background-orange-600">
         Submit
       </button>
     </form>

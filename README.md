@@ -12,7 +12,7 @@
  - An app that gives people a fun and adorable place to keep track of the bugs they’ve found!
 
 ## Technologies Used
- - MERN Stack, GraphQL and Apollo Client, Autoprefixer
+ - MERN Stack, GraphQL and Apollo Client, Autoprefixer, Pico.css and Pico.css Colors for styling
 
 ## License
 
