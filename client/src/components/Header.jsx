@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
+import bugFactComponent from './BugFact';
+
 
 const Header = () => {
   const logout = (event) => {
@@ -12,9 +14,9 @@ const Header = () => {
           <h1 className="m-0" style={{ fontSize: '40px' }}>
             Did you know...
           </h1>
-        <p className="m-0" style={{ fontSize: '34px', fontWeight: '700', textAlign: 'center', paddingBottom: '19px' }}>
-          bug fact data goes here!
-        </p>
+        <div className="m-0 container" style={{ fontSize: '34px', fontWeight: '700', textAlign: 'center', paddingBottom: '19px' }}>
+         {/* <BugFact /> */}
+        </div>
       </div>
     </header>
   );
