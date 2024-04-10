@@ -15,9 +15,9 @@ const Header = () => {
           </h1>
         </Link>
         <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          p
+          paragraph
         </p>
-        <div>
+        {/* <div>
           {Auth.loggedIn() ? (
             <>
               <Link className="btn btn-lg btn-primary m-2" to="/me">
@@ -36,8 +36,8 @@ const Header = () => {
                 Signup
               </Link>
             </>
-          )}
-        </div>
+          )} */}
+        {/* </div> */}
       </div>
     </header>
   );
