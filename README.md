@@ -2,8 +2,7 @@
 
 ## Table of Contents
 [Description](#description)  
-[Technologies Used](#technologies-used)  
-[License](#license)  
+[Technologies Used](#technologies-used)    
 [Contributors](#contributors)  
 [Screenshots](#screenshots)  
 [Links](#links)   
@@ -14,18 +13,16 @@
 ## Technologies Used
  - MERN Stack, GraphQL and Apollo Client, Autoprefixer, Pico.css and Pico.css Colors for styling
 
-## License
-
 ## Contributors
-Daymen [GitHub Profile](https://github.com/DaymenPasick)   
-Rachael [GitHub Profile](https://github.com/RachaelKStokes)    
-Jesse [GitHub Profile](https://github.com/jesse-howell)  
-Shyla [GitHub Profile](https://github.com/sailorshy94)  
+[Daymen](https://github.com/DaymenPasick)   
+[Rachael](https://github.com/RachaelKStokes)    
+[Jesse](https://github.com/jesse-howell)  
+[Shyla](https://github.com/sailorshy94)  
 
 ## Screenshots
 [Screenshot-1]()  
 [Screenshot-2]()  
 
 ## Links
-[Github Repo](http://)  
+[Github Repo](https://https://github.com/jesse-howell/bug-box)  
 [Deployed App](http://)  
