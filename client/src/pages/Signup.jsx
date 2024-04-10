@@ -93,7 +93,7 @@ const Signup = () => {
         {renderForm()}
       </div>
       </article>
-        <Footer />
+        {/* <Footer /> */}
         {error && <div>{error.message}</div>}
     </main>
     </body>
