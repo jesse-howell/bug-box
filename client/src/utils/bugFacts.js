@@ -24,4 +24,15 @@ const bugFacts = [
         fact: "There are nearly as many species of ants (8,800) as there are species of birds (9,000) in the world.",
         source: "https://www.si.edu/spotlight/buginfo/fun-facts-bugs",
     }
-];
+]
+
+// function randomizeBugFacts(bugFacts) {
+//     for (var i = 0;  i < 0; i++) {
+//         const randomBugFact = bugFacts[Math.floor(Math.random * bugFacts.length)];
+//         console.log(randomBugFact);
+//         // return randomBugFact;
+//     }
+// }
+
+// export default { bugFacts, randomizeBugFacts };
+export default bugFacts;
