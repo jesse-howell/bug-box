@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Hero from '../components/Hero';
 // import UserList from "../components/UserList";
 // components
-import Footer from '../components/Footer';
+// import Footer from '../components/Footer';
 
 
 function Home() {
@@ -29,7 +29,6 @@ function Home() {
       <Hero />  
       {/* <div>Home</div> */}
       {/* <Footer /> */}
-  
       {/* <UserList users={users} /> */}
     </>
   );
