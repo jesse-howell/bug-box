@@ -11,7 +11,7 @@ function Navbar() {
     return (
       <nav>
         <ul>
-          <li><strong style={{ fontSize: '40px' }}>Bug-Box!</strong></li>
+          <li><strong style={{ fontSize: '40px' }}>🐞 Bug Box!</strong></li>
         </ul>
         <ul>
           <li><button class="pico-background-orange-500"><a href="/">Home</a></button></li>
@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <nav>
       <ul>
-        <li><strong style={{ fontSize: '40px' }}>Bug-Box!</strong></li>
+        <li><strong style={{ fontSize: '40px' }}>🐞 Bug Box!</strong></li>
       </ul>
       <ul>
         <li><button type="submit" class="pico-background-orange-500"><a href="/">Home</a></button></li>
