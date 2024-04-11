@@ -4,8 +4,7 @@ import hero from '/jewelbeetles.jpg';
 function Hero() {
     return (
      <>
-     <h1 style={{ fontSize: '3rem' }}>🪲 Welcome to Bug Box! 🪲</h1>
-     <br></br>
+     <h1>Welcome to Bug Box!</h1>
      <img src={hero}></img>
      </>
     );
